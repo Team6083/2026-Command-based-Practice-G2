@@ -5,9 +5,11 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Commands;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 
 public class RobotContainer {
+  private final CommandXboxController driverController = new CommandXboxController(Constants.OIConstants.Driver_Controller_PORT);
+
   public RobotContainer() {
     configureBindings();
   }
@@ -15,6 +17,6 @@ public class RobotContainer {
   private void configureBindings() {}
 
   public Command getAutonomousCommand() {
-    return Commands.print("No autonomous command configured");
+    return null;
   }
 }
