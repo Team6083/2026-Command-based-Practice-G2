@@ -14,24 +14,22 @@ public class Robot extends TimedRobot {
     
     @Override
     public void robotInit() {
-        robotContainer = new RobotContainer();
+      robotContainer = new RobotContainer();
     }
     
     @Override
     public void robotPeriodic() {
-        
-        CommandScheduler.getInstance().run();
+      CommandScheduler.getInstance().run();
     }
     
     @Override
     public void autonomousInit() {
+      autonomousCommand = robotContainer.getAutonomousCommand();
         
-        autonomousCommand = robotContainer.getAutonomousCommand();
         
-        
-        if (autonomousCommand != null) {
-            autonomousCommand.schedule();
-        }
+      if (autonomousCommand != null) {
+        autonomousCommand.schedule();
+      }
     }
     
     @Override
@@ -42,9 +40,9 @@ public class Robot extends TimedRobot {
     @Override
     public void teleopInit() {
         
-        if (autonomousCommand != null) {
-            autonomousCommand.cancel();
-        }
+      if (autonomousCommand != null) {
+        autonomousCommand.cancel();
+      }
     }
     
     @Override
