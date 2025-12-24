@@ -1,34 +1,32 @@
 package frc.robot;
 
-public class Constants {
-    public static final class DriveConstants {
-        public static final int Leader_Left_ID = 34;
-        public static final int Follower_Left_ID = 33;
-        public static final int Leader_Right_ID = 31;
-        public static final int Follower_Right_ID = 32;
+public final class Constants {
+  // 驅動系統常數
+  public static final class DriveConstants {
+    public static final int LEADER_LEFT_ID = 34;
+    public static final int FOLLOWER_LEFT_ID = 33;
+    public static final int LEADER_RIGHT_ID = 31;
+    public static final int FOLLOWER_RIGHT_ID = 32;
+  }
 
-    }
+  // 發射系統常數
+  public static final class ShooterConstants {
+    public static final int SHOOTER_MOTOR_ID = 21;
+    public static final double SHOOTER_SPEED = 0.4;
+  }
 
-    // 發射系統常數
-    public static final class ShooterConstants {
-        public static final int Shooter_Motor_ID = 21;
-        public static final double Shooter_Speed = 0.4;
-    }
+  // 攀爬系統常數
+  public static final class ClimberConstants {
+    public static final int CLIMBER_MOTOR_ID = 22;
+  }
 
-    // 攀爬系統常數
-    public static final class ClimberConstants {
-        public static final int Climber_Motor_ID = 22;
+  // 操作介面常數
+  public static final class OperatorConstants {
+    public static final int DRIVER_CONTROLLER_PORT = 0;
+  }
 
-    }
-
-    // 操作介面常數
-    public static final class OIConstants {
-        public static final int Driver_Controller_PORT = 0;
-
-    }
-
-    // 自動模式常數
-    public static final class AutoConstants {
-        public static final double Auto_Drive_Speed = 0.5;
-    }
+  // 自動模式常數
+  public static final class AutoConstants {
+    public static final double AUTO_DRIVE_SPEED = 0.5;
+  }
 }
