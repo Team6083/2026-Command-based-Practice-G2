@@ -35,6 +35,9 @@ public class Robot extends TimedRobot {
   public void disabledPeriodic() {}
 
   @Override
+  public void disabledExit() {}
+
+  @Override
   public void autonomousInit() {
     m_autonomousCommand = m_robotContainer.getAutonomousCommand();
 
@@ -46,6 +49,9 @@ public class Robot extends TimedRobot {
 
   @Override
   public void autonomousPeriodic() {}
+
+  @Override
+  public void autonomousExit() {}
 
   @Override
   public void teleopInit() {
@@ -62,6 +68,9 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {}
 
   @Override
+  public void teleopExit() {}
+
+  @Override
   public void testInit() {
     // Cancels all running commands at the start of test mode.
     CommandScheduler.getInstance().cancelAll();
@@ -69,4 +78,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void testPeriodic() {}
+
+  @Override
+  public void testExit() {}
 }
