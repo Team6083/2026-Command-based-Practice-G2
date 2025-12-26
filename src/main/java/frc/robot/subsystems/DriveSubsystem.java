@@ -6,7 +6,6 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 public class DriveSubsystem extends SubsystemBase {
-
   WPI_VictorSPX leaderLeft = new WPI_VictorSPX(Constants.DriveConstants.LEADER_LEFT_ID); 
   WPI_TalonSRX followerLeft = new WPI_TalonSRX(Constants.DriveConstants.FOLLOWER_LEFT_ID); 
   WPI_VictorSPX leaderRight = new WPI_VictorSPX(Constants.DriveConstants.LEADER_RIGHT_ID);

@@ -11,7 +11,6 @@ import frc.robot.commands.DriveCmd;
 import frc.robot.subsystems.DriveSubsystem;
 
 public class RobotContainer {
-
   private final DriveSubsystem driveSubsystem = new DriveSubsystem();
   private final CommandXboxController driverController = new CommandXboxController(
       Constants.OperatorConstants.DRIVER_CONTROLLER_PORT);
@@ -22,7 +21,6 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-
   }
 
   private void configureDefaultCommands() {
