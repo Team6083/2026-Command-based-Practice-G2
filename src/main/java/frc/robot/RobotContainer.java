@@ -7,16 +7,27 @@ package frc.robot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import frc.robot.commands.DriveCmd;
+import frc.robot.subsystems.DriveSubsystem;
 
 public class RobotContainer {
-  private final CommandXboxController driverController = 
-      new CommandXboxController(Constants.OperatorConstants.DRIVER_CONTROLLER_PORT);
+
+  private final DriveSubsystem driveSubsystem = new DriveSubsystem();
+  private final CommandXboxController driverController = new CommandXboxController(
+      Constants.OperatorConstants.DRIVER_CONTROLLER_PORT);
 
   public RobotContainer() {
     configureBindings();
+    configureDefaultCommands();
   }
 
   private void configureBindings() {
+
+  }
+
+  private void configureDefaultCommands() {
+    driveSubsystem.setDefaultCommand(
+        new DriveCmd(driveSubsystem, driverController));
   }
 
   public Command getAutonomousCommand() {
