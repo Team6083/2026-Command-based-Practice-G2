@@ -2,7 +2,7 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.Subsystems;
+package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-public class climberSubsystem extends SubsystemBase {
+public class ClimberSubsystem extends SubsystemBase {
 
   private WPI_VictorSPX climberMotor = new WPI_VictorSPX(22);
   private DigitalInput limitSwitch = new DigitalInput(1);
@@ -22,7 +22,7 @@ public class climberSubsystem extends SubsystemBase {
   private PIDController pidUp = new PIDController(0.02, 0, 0);
   private double setpoint;
   /** Creates a new climberSubsystem. */
-  public climberSubsystem() {
+  public ClimberSubsystem() {
     pidUp.enableContinuousInput(0,360);
     pidDown.enableContinuousInput(0,360);
   }
