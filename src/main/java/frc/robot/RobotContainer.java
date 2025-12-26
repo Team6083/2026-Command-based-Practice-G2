@@ -12,7 +12,6 @@ import frc.robot.commands.ShootOutCmd;
 import frc.robot.subsystems.ShooterSubsystem;
 
 public class RobotContainer {
-  
   private final ShooterSubsystem shooterSubsystem = new ShooterSubsystem();
   private final CommandXboxController driverController = 
       new CommandXboxController(Constants.OperatorConstants.DRIVER_CONTROLLER_PORT);
