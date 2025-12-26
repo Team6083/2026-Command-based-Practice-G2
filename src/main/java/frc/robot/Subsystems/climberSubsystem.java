@@ -12,14 +12,14 @@ import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-
+import frc.robot.Constants;
 public class ClimberSubsystem extends SubsystemBase {
 
-  private WPI_VictorSPX climberMotor = new WPI_VictorSPX(22);
-  private DigitalInput limitSwitch = new DigitalInput(1);
-  private DutyCycleEncoder encoder = new DutyCycleEncoder(0, 360, 0);
-  private PIDController pidDown = new PIDController(0.02, 0, 0);
-  private PIDController pidUp = new PIDController(0.02, 0, 0);
+  private WPI_VictorSPX climberMotor = new WPI_VictorSPX(Constants.ClimberConstants.CLIMBER_MOTOR_ID);
+  private DigitalInput limitSwitch = new DigitalInput(Constants.ClimberConstants.DIGITALINPUT_ID);
+  private DutyCycleEncoder encoder = new DutyCycleEncoder(Constants.ClimberConstants.DUTYCYCLEENCODER_ID, Constants.ClimberConstants.DUTYCYCLEENCODER_FULLRANGE,  Constants.ClimberConstants.DUTYCYCLEENCODER_EXPECTEDZERO);  
+  private PIDController pidDown = new PIDController(Constants.ClimberConstants.PIDCONTROLLER_DOWN_KP, Constants.ClimberConstants.PIDCONTROLLER_DOWN_KI, Constants.ClimberConstants.PIDCONTROLLER_DOWN_KD);
+  private PIDController pidUp = new PIDController(Constants.ClimberConstants.PIDCONTROLLER_UP_KP, Constants.ClimberConstants.PIDCONTROLLER_UP_KI, Constants.ClimberConstants.PIDCONTROLLER_UP_KD);
   private double setpoint;
   /** Creates a new climberSubsystem. */
   public ClimberSubsystem() {
