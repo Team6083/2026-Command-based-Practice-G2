@@ -32,7 +32,7 @@ public class ClimberSubsystem extends SubsystemBase {
   @Override
   public void periodic() {
     SmartDashboard.putNumber("encoder", encoder.get());
-    SmartDashboard.putNumber("encoder", encoder.getDistance());
+    SmartDashboard.putNumber("encoder angle", encoder.getDistance());
   }
   public void reset(){
     pidUp.reset();
