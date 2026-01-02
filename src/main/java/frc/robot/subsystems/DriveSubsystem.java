@@ -24,6 +24,11 @@ public class DriveSubsystem extends SubsystemBase {
     leaderRight.set(rightSpeed);
   }
 
+  public void moveForward() {
+    leaderLeft.set(0.5);
+    leaderRight.set(0.5);
+  }
+
   public void stop() {
     leaderLeft.set(0);
     leaderRight.set(0);
