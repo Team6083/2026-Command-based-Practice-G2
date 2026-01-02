@@ -24,7 +24,7 @@ public class ClimberSubsystem extends SubsystemBase {
   private double setpoint;
   /** Creates a new climberSubsystem. */
   public ClimberSubsystem() {
-    encoder.setDistancePerPulse(360.0 / 2048.0);
+    encoder.setDistancePerPulse(360.0 / 2004.0);
     pidUp.enableContinuousInput(0,360);
     pidDown.enableContinuousInput(0,360);
   }
