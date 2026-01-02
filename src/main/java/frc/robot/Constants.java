@@ -18,6 +18,17 @@ public final class Constants {
   // 攀爬系統常數
   public static final class ClimberConstants {
     public static final int CLIMBER_MOTOR_ID = 22;
+    public static final int DIGITALINPUT_ID = 1;
+    public static final int DUTYCYCLEENCODER_ID = 0;
+    public static final double DUTYCYCLEENCODER_FULLRANGE = 360;
+    public static final double DUTYCYCLEENCODER_EXPECTEDZERO = 0;
+    public static final double PIDCONTROLLER_DOWN_KP = 0.02;
+    public static final double PIDCONTROLLER_DOWN_KI = 0;
+    public static final double PIDCONTROLLER_DOWN_KD = 0;
+    public static final double PIDCONTROLLER_UP_KP = 0.03;
+    public static final double PIDCONTROLLER_UP_KI = 0;
+    public static final double PIDCONTROLLER_UP_KD = 0;
+
   }
 
   // 操作介面常數
