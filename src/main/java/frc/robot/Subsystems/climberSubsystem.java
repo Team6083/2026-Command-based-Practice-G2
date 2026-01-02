@@ -24,7 +24,7 @@ public class ClimberSubsystem extends SubsystemBase {
   private double setpoint;
   /** Creates a new climberSubsystem. */
   public ClimberSubsystem() {
-    encoder.setDistancePerPulse(360.0 / 2004.0);
+    encoder.setDistancePerPulse(90.0 / 1600.0);
     pidUp.enableContinuousInput(0,360);
     pidDown.enableContinuousInput(0,360);
   }
@@ -56,7 +56,7 @@ public class ClimberSubsystem extends SubsystemBase {
 
     setpoint = 0.0;
     double currentPosition = encoder.getDistance();
-    double output = -(pidUp.calculate(currentPosition, setpoint));
+    double output = pidUp.calculate(currentPosition, setpoint);
     climberMotor.set(ControlMode.PercentOutput, MathUtil.clamp(output, -0.2, 0.2));
   }
 
