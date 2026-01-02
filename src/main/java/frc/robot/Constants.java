@@ -25,7 +25,7 @@ public final class Constants {
     public static final double PIDCONTROLLER_DOWN_KP = 0.02;
     public static final double PIDCONTROLLER_DOWN_KI = 0;
     public static final double PIDCONTROLLER_DOWN_KD = 0;
-    public static final double PIDCONTROLLER_UP_KP = 0.02;
+    public static final double PIDCONTROLLER_UP_KP = 0.03;
     public static final double PIDCONTROLLER_UP_KI = 0;
     public static final double PIDCONTROLLER_UP_KD = 0;
 
